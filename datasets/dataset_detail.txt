@@ -1,2 +1,0 @@
-MNIST
-CIFAR-10
