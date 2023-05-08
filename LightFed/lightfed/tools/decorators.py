@@ -18,8 +18,7 @@ def logging_time_cost(func):
     return decorated
 
 
-# 用在类函数中
-# 当类函数调用次数达到wait_times时才会真正执行
+
 # class SyncFunc:
 #     def __init__(self, func):
 #         wraps(func)(self)
@@ -41,7 +40,7 @@ def logging_time_cost(func):
 #             return types.MethodType(self, instance)
 #
 #
-# # 用在类函数中
+
 # def group_params(condition_func):
 #     def decorater(func):
 #         _varnames_ = func.__code__.co_varnames[1:]
@@ -80,7 +79,7 @@ def logging_time_cost(func):
 #     return decorater
 #
 #
-# # 用在类函数中
+
 # def reduce_params(reduce_func_dict, condition_func):
 #     def decorater(func):
 #         _varnames_ = func.__code__.co_varnames[1:]
