@@ -21,7 +21,7 @@ class ClientTrainer:
 
         self.train_dataloader = args.data_distributer.get_client_train_dataloader(client_id)
         self.train_batch_data_iter = CycleDataloader(self.train_dataloader)
-        self._train_big_batch_dataloader = DataLoader(dataset=self.train_dataloader.dataset, batch_size=2048, shuffle=False)  # 大批次用于快速计算全局梯度
+        self._train_big_batch_dataloader = DataLoader(dataset=self.train_dataloader.dataset, batch_size=2048, shuffle=False)
 
         self.test_dataloader = args.data_distributer.get_client_test_dataloader(client_id)
 
