@@ -17,7 +17,7 @@ class ClientTrainer:
         self.device = args.device
         self.batch_size = args.batch_size
         self.weight_decay = args.weight_decay
-        self.alpha = None  # 会在外面设置
+        self.alpha = None
 
         self.train_dataloader = args.data_distributer.get_client_train_dataloader(client_id)
         self.train_batch_data_iter = CycleDataloader(self.train_dataloader)
@@ -87,8 +87,6 @@ class ClientTrainer:
         return grad
 
     def train_locally_step(self, step):
-        """算法的第12行到第15行
-        """
         logging.debug(f"train_locally_step for step: {step}")
         self.model_params = self.model_params_mid
         batch_x, batch_y = self._new_random_batch()

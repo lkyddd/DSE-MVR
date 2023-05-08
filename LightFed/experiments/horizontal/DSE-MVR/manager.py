@@ -213,7 +213,6 @@ class ClientManager(BaseServer):
         self.clear()
         logging.debug(f"training client_id:{self.client_id}, step:{step}")
 
-        # 算法第5行
         self.trainer.model_params_mid = formula(lambda model_params, grad_v: model_params - self.gamma * grad_v,
                                                 self.trainer.model_params, self.trainer.grad_v)
 

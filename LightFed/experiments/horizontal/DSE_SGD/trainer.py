@@ -71,8 +71,6 @@ class ClientTrainer:
         return grad
 
     def train_locally_step(self, step):
-        """算法的第12行到第15行
-        """
         logging.debug(f"train_locally_step for step: {step}")
         batch_x, batch_y = self._new_random_batch()
         self.grad_g_t = self._get_grad_(self.model_params, batch_x, batch_y)

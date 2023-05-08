@@ -224,7 +224,6 @@ class ClientManager(BaseServer):
                     self.communication_cost[self.client_id, nei_client_id] += model_size(self.trainer.model_params_mid)
 
         else:
-            # 算法第11行
             self.trainer.model_params = self.trainer.model_params_mid
             self.finish_train_step()
 
